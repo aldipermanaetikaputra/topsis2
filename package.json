@@ -1,10 +1,9 @@
 {
   "name": "topsis2",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "main": "build/index.js",
   "typings": "build/index.d.ts",
   "license": "MIT",
-  "type": "module",
   "url": "https://github.com/aldipermanaetikaputra/topsis2",
   "keywords": [
     "topsis",
