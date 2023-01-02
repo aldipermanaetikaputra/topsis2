@@ -1,6 +1,6 @@
 {
   "name": "topsis2",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "build/index.js",
   "typings": "build/index.d.ts",
   "license": "MIT",
@@ -25,7 +25,8 @@
     "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "tsc"
   },
   "devDependencies": {
     "@types/jest": "^29.2.5",
