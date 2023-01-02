@@ -2,8 +2,28 @@
   "name": "topsis2",
   "version": "1.0.0",
   "main": "build/index.js",
+  "typings": "build/index.d.ts",
   "license": "MIT",
   "type": "module",
+  "url": "https://github.com/aldipermanaetikaputra/topsis2",
+  "keywords": [
+    "topsis",
+    "mcdm",
+    "dss"
+  ],
+  "description": "Implementation of TOPSIS method for Multiple-Criteria Decision Making (MCDM).",
+  "author": {
+    "name": "Aldi Permana Etika Putra",
+    "email": "aldipermanaetikaputra@gmail.com",
+    "url": "https://github.com/aldipermanaetikaputra"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://aldipermanaetikaputra@github.com/aldipermanaetikaputra/topsis2.git"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "scripts": {
     "test": "jest"
   },
