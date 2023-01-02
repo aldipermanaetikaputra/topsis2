@@ -1,8 +1,6 @@
 import Topsis from './Topsis.js';
 
-/* eslint-disable @typescript-eslint/unbound-method */
-
-export const rank = Topsis.rank;
-export const best = Topsis.best;
+export const rank = Topsis.rank.bind(Topsis);
+export const best = Topsis.best.bind(Topsis);
 
 export default Topsis;
