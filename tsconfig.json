@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "module": "esnext",
+    "rootDir": "./src",
+    "moduleResolution": "Node16",
+    "baseUrl": "./",
+    "resolveJsonModule": true,
+    "composite": false,
+    "declaration": false,
+    "sourceMap": true,
+    "outDir": "./build/",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true
+  },
+  "lib": ["esnext"],
+  "exclude": ["node_modules"]
+}
