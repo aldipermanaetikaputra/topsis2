@@ -1,6 +1,6 @@
 {
   "name": "topsis2",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Well-tested, simple and lightweight TOPSIS implementation with zero dependencies built with TypeScript.",
   "url": "https://github.com/aldipermanaetikaputra/topsis2",
   "keywords": [
