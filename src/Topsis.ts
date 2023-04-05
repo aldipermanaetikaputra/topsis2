@@ -23,7 +23,7 @@ class Topsis {
 
     // Calculating normalized decision matrix
 
-    const normalizedMatrix: number[][] = new Array(n).fill(null).map(() => new Array(m).fill(0));
+    const normalizedMatrix = new Array(n).fill(null).map(() => new Array<number>(m).fill(0));
 
     for (let j = 0; j < m; j++) {
       const denominator = Math.sqrt(
@@ -60,7 +60,7 @@ class Topsis {
     const positiveIdealSolutionMatrix = new Array(m)
       .fill(null)
       .map((_, j) =>
-        Math[criteria[j].benefical ? 'max' : 'min'](
+        Math[criteria[j].type !== 'cost' ? 'max' : 'min'](
           ...weightedNormalizedMatrix.map(rows => rows[j])
         )
       );
@@ -78,7 +78,7 @@ class Topsis {
     const negativeIdealSolutionMatrix = new Array(m)
       .fill(null)
       .map((_, j) =>
-        Math[criteria[j].benefical ? 'min' : 'max'](
+        Math[criteria[j].type !== 'cost' ? 'min' : 'max'](
           ...weightedNormalizedMatrix.map(rows => rows[j])
         )
       );
@@ -188,7 +188,7 @@ class Topsis {
 
 type CriteriaAttribute = {
   weight: number;
-  benefical: boolean;
+  type?: 'benefit' | 'cost';
 };
 
 export default Topsis;

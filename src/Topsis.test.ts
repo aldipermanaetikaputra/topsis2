@@ -2,12 +2,12 @@ import Topsis from './Topsis.js';
 
 test('Rank 4 alternatives with 6 criteria', () => {
   const topsis = new Topsis([
-    { weight: 4, benefical: false },
-    { weight: 5, benefical: true },
-    { weight: 4, benefical: true },
-    { weight: 3, benefical: true },
-    { weight: 3, benefical: true },
-    { weight: 2, benefical: true },
+    { weight: 4, type: 'cost' },
+    { weight: 5, type: 'benefit' },
+    { weight: 4, type: 'benefit' },
+    { weight: 3, type: 'benefit' },
+    { weight: 3, type: 'benefit' },
+    { weight: 2, type: 'benefit' },
   ]);
 
   expect(
