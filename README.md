@@ -83,6 +83,16 @@ Decision matrix that contains score data from all alternatives. The columns of t
 
 Example use case:
 
+|                                | C1 (Price) | C2 (RAM) | C3 (Storage) | C4 (Battery) | C5 (AnTuTu) |
+| ------------------------------ | ---------- | -------- | ------------ | ------------ | ----------- |
+| **A1 (Xiaomi Poco M4 Pro)**    | $201       | 6 GB     | 128 GB       | 5000 mAh     | 318444      |
+| **A2 (Google Pixel 6a)**       | $283       | 6 GB     | 128 GB       | 4410 mAh     | 502773      |
+| **A3 (OnePlus Nord N20 5G)**   | $200       | 6 GB     | 128 GB       | 4500 mAh     | 380672      |
+| **A4 (Samsung Galaxy A54)**    | $374       | 6 GB     | 128 GB       | 5000 mAh     | 506678      |
+| **A5 (Samsung Galaxy A33 5G)** | $269       | 6 GB     | 128 GB       | 5000 mAh     | 394918      |
+
+The values above are for illustration purposes only taken from [GSMArena.com](https://www.gsmarena.com/). The table above can be written as follows:
+
 ```js
 // Alternative scores for smartphone
 const matrix = [
@@ -93,16 +103,6 @@ const matrix = [
   [269, 6, 128, 5000, 394918], // A5 = Samsung Galaxy A33 5G
 ];
 ```
-
-The code above will map the score value as in the following table:
-
-|        | C1 (Price) | C2 (RAM) | C3 (Storage) | C4 (Battery) | C5 (AnTuTu) |
-| ------ | ---------- | -------- | ------------ | ------------ | ----------- |
-| **A1** | $201       | 6 GB     | 128 GB       | 5000 mAh     | 318444      |
-| **A2** | $283       | 6 GB     | 128 GB       | 4410 mAh     | 502773      |
-| **A3** | $200       | 6 GB     | 128 GB       | 4500 mAh     | 380672      |
-| **A4** | $374       | 6 GB     | 128 GB       | 5000 mAh     | 506678      |
-| **A5** | $269       | 6 GB     | 128 GB       | 5000 mAh     | 394918      |
 
 - ##### `verbose`
 
