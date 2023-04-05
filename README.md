@@ -238,7 +238,7 @@ yarn test
 
 If you have anything to contribute, or functionality that you lack - you are more than welcome to participate in this!
 
-Additions to unit testing are very welcome
+Additions to unit testing are very welcome.
 
 ## License
 
