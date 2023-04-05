@@ -1,15 +1,15 @@
 import Utils from './Utils.js';
 
 class Topsis {
-  public static rank(criterias: CriteriaAttribute[], matrix: number[][], verbose = false) {
+  public static rank(criteria: CriteriaAttribute[], matrix: number[][], verbose = false) {
     // Validating decision matrix args
 
     if (!Array.isArray(matrix)) {
       throw TypeError(`The matrix argument must be an array of numbers`);
     }
 
-    if (!matrix.every(alternative => alternative.length === criterias.length)) {
-      throw TypeError(`The column length of the matrix must be equal to ${criterias.length}`);
+    if (!matrix.every(row => row.length === criteria.length)) {
+      throw TypeError(`The column length of the matrix must be equal to ${criteria.length}`);
     }
 
     if (matrix.length === 0) {
@@ -45,7 +45,7 @@ class Topsis {
     const weightedNormalizedMatrix: number[][] = new Array(n)
       .fill(null)
       .map((_, i) =>
-        new Array(m).fill(null).map((_, j) => normalizedMatrix[i][j] * criterias[j].weight)
+        new Array(m).fill(null).map((_, j) => normalizedMatrix[i][j] * criteria[j].weight)
       );
 
     if (verbose)
@@ -60,7 +60,7 @@ class Topsis {
     const positiveIdealSolutionMatrix = new Array(m)
       .fill(null)
       .map((_, j) =>
-        Math[criterias[j].benefical ? 'max' : 'min'](
+        Math[criteria[j].benefical ? 'max' : 'min'](
           ...weightedNormalizedMatrix.map(rows => rows[j])
         )
       );
@@ -78,7 +78,7 @@ class Topsis {
     const negativeIdealSolutionMatrix = new Array(m)
       .fill(null)
       .map((_, j) =>
-        Math[criterias[j].benefical ? 'min' : 'max'](
+        Math[criteria[j].benefical ? 'min' : 'max'](
           ...weightedNormalizedMatrix.map(rows => rows[j])
         )
       );
@@ -166,23 +166,23 @@ class Topsis {
     return rankedAlternatives;
   }
 
-  public static best(criterias: CriteriaAttribute[], matrix: number[][], verbose = false) {
-    const ranked = this.rank(criterias, matrix, verbose);
+  public static best(criteria: CriteriaAttribute[], matrix: number[][], verbose = false) {
+    const ranked = this.rank(criteria, matrix, verbose);
     return ranked.length ? ranked[0] : null;
   }
 
-  public criterias: CriteriaAttribute[];
+  public criteria: CriteriaAttribute[];
 
-  constructor(criterias: CriteriaAttribute[]) {
-    this.criterias = criterias;
+  constructor(criteria: CriteriaAttribute[]) {
+    this.criteria = criteria;
   }
 
   public rank(matrix: number[][], verbose = false) {
-    return Topsis.rank(this.criterias, matrix, verbose);
+    return Topsis.rank(this.criteria, matrix, verbose);
   }
 
   public best(matrix: number[][], verbose = false) {
-    return Topsis.best(this.criterias, matrix, verbose);
+    return Topsis.best(this.criteria, matrix, verbose);
   }
 }
 

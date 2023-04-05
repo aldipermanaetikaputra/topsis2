@@ -1,4 +1,7 @@
 node_modules/
-build/
+lib/
+tmp/
 yarn-error.log
 .DS_Store
+.env
+.vscode

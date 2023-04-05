@@ -1,20 +1,33 @@
 {
   "name": "topsis2",
-  "version": "1.0.9",
-  "main": "build/index.js",
-  "typings": "build/index.d.ts",
-  "license": "MIT",
+  "version": "1.1.0",
+  "description": "Implementation of TOPSIS method for Multiple-Criteria Decision Making (MCDM).",
   "url": "https://github.com/aldipermanaetikaputra/topsis2",
   "keywords": [
     "topsis",
     "mcdm",
+    "madm",
     "dss"
   ],
-  "description": "Implementation of TOPSIS method for Multiple-Criteria Decision Making (MCDM).",
   "author": {
     "name": "Aldi Permana Etika Putra",
     "email": "aldipermanaetikaputra@gmail.com",
     "url": "https://github.com/aldipermanaetikaputra"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aldipermanaetikaputra/topsis2/issues"
+  },
+  "files": [
+    "lib"
+  ],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "test": "jest",
+    "lint": "eslint . --ext .ts",
+    "version": "yarn build"
   },
   "repository": {
     "type": "git",
@@ -23,23 +36,19 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
-  "files": [
-    "/build"
-  ],
-  "scripts": {
-    "test": "jest",
-    "build": "tsc"
-  },
   "devDependencies": {
-    "@types/jest": "^29.2.5",
-    "@typescript-eslint/eslint-plugin": "^5.47.1",
-    "@typescript-eslint/parser": "^5.47.1",
-    "eslint": "^8.31.0",
-    "eslint-config-prettier": "^8.5.0",
+    "@types/jest": "^29.5.0",
+    "@types/minimist": "^1.2.2",
+    "@types/tmp": "^0.2.3",
+    "@typescript-eslint/eslint-plugin": "^5.57.1",
+    "@typescript-eslint/parser": "^5.57.1",
+    "eslint": "^8.37.0",
+    "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "jest": "^29.3.1",
-    "prettier": "^2.8.1",
-    "ts-jest": "^29.0.3",
-    "typescript": "^4.9.4"
+    "jest": "^29.5.0",
+    "prettier": "^2.8.7",
+    "tmp": "^0.2.1",
+    "ts-jest": "^29.0.5",
+    "typescript": "4.9.5"
   }
 }

@@ -1,5 +1,5 @@
 module.exports = {
-  preset: 'ts-jest/presets/default-esm',
+  preset: 'ts-jest',
   moduleNameMapper: {
     '^(\\.{1,2}/.*)\\.js$': '$1',
   },
