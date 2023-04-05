@@ -1,6 +1,8 @@
 # topsis2
 
-topsis2 is a well-tested, simple and lightweight [TOPSIS](https://en.wikipedia.org/wiki/TOPSIS) implementation with zero dependencies built with TypeScript.
+topsis2 is a well-tested, simple, and lightweight [TOPSIS](https://en.wikipedia.org/wiki/TOPSIS) implementation with zero dependencies built with TypeScript.
+
+[TOPSIS](https://en.wikipedia.org/wiki/TOPSIS), known as Technique for Order of Preference by Similarity to Ideal Solution, is a multi-criteria decision analysis method. It compares a set of alternatives based on a pre-specified criterion.
 
 Why topsis2? because [topsis](https://www.npmjs.com/package/topsis) already taken with no more updates, no TypeScript included, no and has unnecessary dependency. Therefore, topsis2 is expected to be a successor with easier, better use.
 
@@ -55,10 +57,10 @@ This method will rank the alternatives with TOPSIS calculations and return the o
 
 Criteria are usually in the form of measures or rules or standards used as benchmarks in decision-making. The property of `CriteriaAttribute` are:
 
-| Name   | Type       | Description                                                                                                             |
-| ------ | ---------- | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| weight | `number`   | A number to estimate the relative importance of criterion. Can be any positive number, including `float` **(required)** |
-| type   | `'benefit' | 'cost'`                                                                                                                 | The `benefit` criterion is desired to be maximized, i.e. the higher the alternative scores in terms of this criterion, the better the alternative; in contrast, for the `cost` criterion, a lower value is preferred. Default: `'benefit'` |
+| Name   | Type                  | Description                                                                                                                                                                                                                                |
+| ------ | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| weight | `number`              | A number to estimate the relative importance of criterion. Can be any positive number, including `float` **(required)**                                                                                                                    |
+| type   | `'benefit' \| 'cost'` | The `benefit` criterion is desired to be maximized, i.e. the higher the alternative scores in terms of this criterion, the better the alternative; in contrast, for the `cost` criterion, a lower value is preferred. Default: `'benefit'` |
 
 Example use case:
 
@@ -202,7 +204,7 @@ sorted preference values (V)
 ranked = [ 1, 2, 0, 4, 3 ]
 ```
 
-The results above indicate an alternative with index 1 or A2 is the best smartphone from the TOPSIS calculation followed by A3, A1, A5 and A4.
+The results above indicate an alternative with index 1 or A2 (Google Pixel 6a) is the best smartphone from the TOPSIS calculation followed by A3, A1, A5 and A4.
 
 #### `topsis2.best(criteria: CriteriaAttribute[], matrix: number[][], verbose?: boolean): number[]`
 
