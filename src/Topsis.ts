@@ -186,7 +186,8 @@ class Topsis {
   }
 }
 
-type CriteriaAttribute = {
+export type CriteriaAttribute = {
+  name?: string;
   weight: number;
   type?: 'benefit' | 'cost';
 };
