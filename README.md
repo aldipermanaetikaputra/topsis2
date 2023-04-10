@@ -4,7 +4,7 @@ topsis2 is a well-tested, simple, and lightweight [TOPSIS](https://en.wikipedia
 
 [TOPSIS](https://en.wikipedia.org/wiki/TOPSIS), known as Technique for Order of Preference by Similarity to Ideal Solution, is a multi-criteria decision analysis method. It compares a set of alternatives based on a pre-specified criterion.
 
-Why topsis2? because [topsis](https://www.npmjs.com/package/topsis) already taken with no more updates, no TypeScript included, no and has unnecessary dependency. Therefore, topsis2 is expected to be a successor with easier, better use.
+Why topsis2? because [topsis](https://www.npmjs.com/package/topsis) already taken and is no longer actively maintained, lacks TypeScript support, and has some unnecessary dependencies. Therefore, the aim of topsis2 is to provide an easier and better alternative, and to serve as a successor to the outdated topsis library.
 
 ## Install
 
